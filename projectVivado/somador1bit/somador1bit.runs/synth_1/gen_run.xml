@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1616095156">
   <File Type="PA-TCL" Name="somador1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="somador1_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="somador1_reports.tcl"/>
   <File Type="RDS-RDS" Name="somador1.vds"/>
   <File Type="RDS-UTIL" Name="somador1_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="somador1_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="somador1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="somador1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="somador1_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/somador1.vhd">
@@ -36,9 +33,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
