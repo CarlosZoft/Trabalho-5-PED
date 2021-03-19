@@ -13,19 +13,12 @@ architecture Behavioral of complemento_de_1 is
 
 begin
     
-    Z(0) <= A(0) when sel='0' else
-            A(0) xor '1'; 
-    c0 <= A(0) and '1';
+    Z(0) <= A(0) xor sel;
     
-    Z(1) <= A(1) when sel='0' else
-            A(1) xor c0;
-    c1 <= A(1) and c0;
+    Z(1) <= A(1) xor sel;
     
-    Z(2) <= A(2) when sel='0' else
-            A(2) xor c1;
-    c2 <= A(2) and c1;
+    Z(2) <= A(2) xor sel;
       
-    Z(3) <= A(3) when sel='0' else
-            A(3) xor c2;
+    Z(3) <= A(3) xor sel;
 
 end Behavioral;

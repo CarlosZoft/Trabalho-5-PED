@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="somador1.tcl"/>
   <File Type="REPORTS-TCL" Name="somador1_reports.tcl"/>
   <File Type="RDS-RDS" Name="somador1.vds"/>
-  <File Type="RDS-UTIL" Name="somador1_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="somador1_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="somador1.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
