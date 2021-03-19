@@ -19,20 +19,24 @@ component somador1
            cout : out STD_LOGIC);
 end component;
 
+component complemento_de_1
+    Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
+           sel : in STD_LOGIC;
+           Z : out STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
+
     signal c0, c1, c2 : STD_LOGIC;
-    signal x1, x2, x3, x4 : STD_LOGIC;
+    signal x1 : STD_LOGIC_VECTOR (3 downto 0);
 
 begin
-
-    x1 <= cinS xor bS(0);
-    x2 <= cinS xor bS(1);
-    x3 <= cinS xor bS(2);
-    x4 <= cinS xor bS(3);
     
-    sum1: somador1 port map(a => aS(0), b => x1, cin => cinS, s => sS(0), cout => c0);
-    sum2: somador1 port map(a => aS(1), b => x2, cin => c0, s => sS(1), cout => c1);
-    sum3: somador1 port map(a => aS(2), b => x3, cin => c1, s => sS(2), cout => c2);
-    sum4: somador1 port map(a => aS(3), b => x4, cin => c2, s => sS(3), cout => coutS);
+    cp1: complemento_de_1 port map(A => bS, sel => cinS, Z => x1);
+    
+    sum1: somador1 port map(a => aS(0), b => x1(0), cin => cinS, s => sS(0), cout => c0);
+    sum2: somador1 port map(a => aS(1), b => x1(1), cin => c0, s => sS(1), cout => c1);
+    sum3: somador1 port map(a => aS(2), b => x1(2), cin => c1, s => sS(2), cout => c2);
+    sum4: somador1 port map(a => aS(3), b => x1(3), cin => c2, s => sS(3), cout => coutS);
 
 
 end Behavioral;
